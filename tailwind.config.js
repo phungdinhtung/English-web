@@ -71,6 +71,9 @@ module.exports = {
 				logo: "url('/images/logo.png')",
 				'logo-dark': "url('/images/logo-dark.png')",
 			},
+			fontFamily: {
+				GTWalsheimPro: ['GT Walsheim Pro'],
+			},
 		},
 	},
 	plugins: [require('tailwindcss-animate')],
