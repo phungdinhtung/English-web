@@ -72,17 +72,10 @@
 
 @layer base {
 	* {
-		@apply border-border;
+		@apply border-border font-GTWalsheimPro;
 	}
 	body {
 		@apply bg-background text-foreground;
-	}
-	h1,
-	h2,
-	h3,
-	h4,
-	h5 {
-		@apply font-GTWalsheimPro;
 	}
 	h1 {
 		@apply text-[60px] font-bold;

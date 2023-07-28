@@ -7,6 +7,8 @@ import { useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import { useDrag, useGesture } from 'react-use-gesture'
 import { useRouter } from 'next/router'
+import arrowWhite from '@/public/images/arrow-white.png'
+import Image from 'next/image'
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -30,6 +32,8 @@ export default function Home() {
 	}
 
 	const [{ x: xWelcome, y: yWelcome, scale: scaleWelcome }, apiWelcome] = useSpring(() => ({ x: 0, y: 0, scale: 1 }))
+	const [{ x: xArrow, y: yArrow, scale: scaleArrow }, apiArrow] = useSpring(() => ({ x: 0, y: 0, scale: 1 }))
+
 	const [{ x, y, rotateX, rotateY, rotateZ, zoom, scale, width, height, borderRadius }, api] = useSpring(() => ({
 		rotateX: 0,
 		rotateY: 0,
@@ -39,8 +43,8 @@ export default function Home() {
 		x: 0,
 		y: 0,
 		config: { mass: 5, tension: 350, friction: 40 },
-		width: 300,
-		height: 300,
+		width: 280,
+		height: 280,
 		borderRadius: 999,
 	}))
 
@@ -95,31 +99,35 @@ export default function Home() {
 		}
 	)
 
-	const bind = useDrag(
-		({ offset: [x, y], active }) => {
-			apiWelcome.start({ x, y, scale: active ? 1.1 : 1, immediate: active })
-		},
-		{
-			bounds: {
-				left: -widthScreen / 2,
-				right: widthScreen / 2,
-				top: -160,
-				bottom: heightScreen - 160 - 80,
-			},
-			rubberband: true,
-		}
-	)
+	const bind = useDrag(({ offset: [x, y], active }) => {
+		apiWelcome.start({ x, y, scale: active ? 1.1 : 1, immediate: active })
+	})
+
+	const arrow = useDrag(({ offset: [x, y], active }) => {
+		apiArrow.start({ x, y, scale: active ? 1.1 : 1, immediate: active })
+	})
+
 	return (
 		<main className={`flex min-h-screen flex-col items-center justify-center ${inter.className} overflow-hidden`}>
 			<animated.h1
 				{...bind()}
 				style={{ x: xWelcome, y: yWelcome, scale: scaleWelcome }}
-				className={'fixed top-40 rotate-12 select-none cursor-move max-md:text-xl'}
+				className={
+					'fixed top-40 rotate-12 select-none cursor-move max-md:text-xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-white'
+				}
 			>
 				Welcome to DTEng
 			</animated.h1>
 			<animated.div
-				onPointerDown={() => console.log('pointer down')}
+				{...arrow()}
+				style={{ x: xArrow, y: yArrow, scale: scaleArrow }}
+				className="select-none cursor-move fixed top-[240px] left-[60%]"
+			>
+				<Image draggable={false} src={arrowWhite} alt="arrow-white" width={100} height={100} className="rotate-90" />
+				<p>&#10024; This one (me) can drag, hover and click &#10024;</p>
+				<Image draggable={false} src={arrowWhite} alt="arrow-white" width={100} height={100} />
+			</animated.div>
+			<animated.div
 				ref={domTarget}
 				className={cn('bg-[#404040] cursor-move rounded-full flex items-center justify-center')}
 				style={{
@@ -135,7 +143,9 @@ export default function Home() {
 					borderRadius,
 				}}
 			>
-				<div className={cn('bg-logo-dark object-cover bg-cover w-[280px] h-[280px] rounded-full')} />
+				<div className="bg-gradient-to-r from-indigo-500 to-white rounded-full p-1">
+					<div className={cn('bg-logo-dark object-cover bg-cover w-[280px] h-[280px] rounded-full')} />
+				</div>
 			</animated.div>
 		</main>
 	)
