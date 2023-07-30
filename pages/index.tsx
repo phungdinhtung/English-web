@@ -1,23 +1,17 @@
-import { Inter } from 'next/font/google'
-
 import { animated, to, useSpring } from '@react-spring/web'
 
 import { cn } from '@/lib/utils'
+import arrowWhite from '@/public/images/arrow-white.png'
+import { useDrag, useGesture } from '@use-gesture/react'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
-import { useDrag, useGesture } from 'react-use-gesture'
-import { useRouter } from 'next/router'
-import arrowWhite from '@/public/images/arrow-white.png'
-import Image from 'next/image'
-
-const inter = Inter({
-	subsets: ['latin'],
-})
 
 export default function Home() {
 	const router = useRouter()
 	const [open, setOpen] = useState(false)
-	const domTarget = useRef<HTMLDivElement>(null)
+	const target = useRef<HTMLDivElement>(null)
 
 	const { width: widthScreen, height: heightScreen } = useWindowSize()
 
@@ -90,7 +84,7 @@ export default function Home() {
 			},
 		},
 		{
-			domTarget,
+			target,
 			eventOptions: { passive: false },
 			drag: {
 				bounds,
@@ -108,12 +102,12 @@ export default function Home() {
 	})
 
 	return (
-		<main className={`flex min-h-screen flex-col items-center justify-center ${inter.className} overflow-hidden`}>
+		<div className={`flex min-h-screen flex-col items-center justify-center overflow-hidden`}>
 			<animated.h1
 				{...bind()}
 				style={{ x: xWelcome, y: yWelcome, scale: scaleWelcome }}
 				className={
-					'fixed top-40 rotate-12 select-none cursor-move max-md:text-xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-white'
+					'fixed top-20 md:top-40 rotate-12 select-none cursor-move max-md:text-xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-white touch-none'
 				}
 			>
 				Welcome to DTEng
@@ -121,15 +115,22 @@ export default function Home() {
 			<animated.div
 				{...arrow()}
 				style={{ x: xArrow, y: yArrow, scale: scaleArrow }}
-				className="select-none cursor-move fixed top-[240px] left-[60%]"
+				className="select-none cursor-move fixed top-32 md:top-[240px] left-1/2 md:left-[60%] touch-none"
 			>
-				<Image draggable={false} src={arrowWhite} alt="arrow-white" width={100} height={100} className="rotate-90" />
+				<Image
+					draggable={false}
+					src={arrowWhite}
+					alt="arrow-white"
+					width={100}
+					height={100}
+					className="rotate-90 max-md:w-14"
+				/>
 				<p>&#10024; This one (me) can drag, hover and click &#10024;</p>
-				<Image draggable={false} src={arrowWhite} alt="arrow-white" width={100} height={100} />
+				<Image draggable={false} src={arrowWhite} alt="arrow-white" width={100} height={100} className="max-md:w-14" />
 			</animated.div>
 			<animated.div
-				ref={domTarget}
-				className={cn('bg-[#404040] cursor-move rounded-full flex items-center justify-center')}
+				ref={target}
+				className={cn('bg-[#404040] cursor-move rounded-full flex items-center justify-center touch-none')}
 				style={{
 					transform: 'perspective(600px)',
 					x,
@@ -147,6 +148,6 @@ export default function Home() {
 					<div className={cn('bg-logo-dark object-cover bg-cover w-[280px] h-[280px] rounded-full')} />
 				</div>
 			</animated.div>
-		</main>
+		</div>
 	)
 }

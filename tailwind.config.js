@@ -76,5 +76,32 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [
+		require('tailwindcss-animate'),
+		function ({ addComponents }) {
+			addComponents({
+				'.container': {
+					maxWidth: '100%',
+					paddingLeft: '2rem',
+					paddingRight: '2rem',
+					'@screen sm': {
+						paddingLeft: '3rem',
+						paddingRight: '3rem',
+					},
+					'@screen md': {
+						paddingLeft: '3.5rem',
+						paddingRight: '3.5rem',
+					},
+					'@screen lg': {
+						paddingLeft: '4rem',
+						paddingRight: '4rem',
+					},
+					'@screen xl': {
+						paddingLeft: '4.5rem',
+						paddingRight: '4.5rem',
+					},
+				},
+			})
+		},
+	],
 }

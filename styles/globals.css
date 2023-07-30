@@ -6,7 +6,7 @@
 
 @layer base {
 	:root {
-		--background: 0 0% 0%;
+		--background: 0 0% 10%;
 		--foreground: 0 0% 100%;
 
 		--muted: 0 0% 96.1%;
@@ -75,9 +75,9 @@
 		@apply border-border font-GTWalsheimPro;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground max-md:text-sm;
 	}
 	h1 {
-		@apply text-[60px] font-bold;
+		@apply text-[60px] leading-[80px] font-bold;
 	}
 }
