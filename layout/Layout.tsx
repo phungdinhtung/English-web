@@ -8,7 +8,7 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
 	return (
-		<>
+		<div className="overflow-hidden">
 			<NavBar />
 			<motion.div
 				initial={{ x: 300, opacity: 0 }}
@@ -22,7 +22,7 @@ function Layout({ children }: LayoutProps) {
 			>
 				<main className="container">{children}</main>
 			</motion.div>
-		</>
+		</div>
 	)
 }
 
