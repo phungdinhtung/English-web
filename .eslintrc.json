@@ -1,4 +1,4 @@
-// In file .eslintrc
 {
-  "extends": ["next", "next/core-web-vitals", "prettier"]
+  "extends": ["next", "next/core-web-vitals", "prettier"],
+  "rules": { "react/no-unescaped-entities": 0 }
 }

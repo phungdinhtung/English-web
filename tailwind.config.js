@@ -72,7 +72,7 @@ module.exports = {
 				'logo-dark': "url('/images/logo-dark.png')",
 			},
 			fontFamily: {
-				GTWalsheimPro: ['GT Walsheim Pro'],
+				SVNWalsheimPro: ['SVN-Walsheim Pro'],
 			},
 		},
 	},

@@ -1,447 +1,127 @@
 @font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-Light.eot');
-	src:
-		local('GT Walsheim Pro Light'),
-		local('GTWalsheimPro-Light'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Light.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Light.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Light.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Light.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-Regular.eot');
-	src:
-		local('GT Walsheim Pro Regular'),
-		local('GTWalsheimPro-Regular'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Regular.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Regular.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-ThinOblique.eot');
-	src:
-		local('GT Walsheim Pro Thin Oblique'),
-		local('GTWalsheimPro-ThinOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-ThinOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-ThinOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-ThinOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-ThinOblique.ttf') format('truetype');
-	font-weight: 100;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-Thin.eot');
-	src:
-		local('GT Walsheim Pro Thin'),
-		local('GTWalsheimPro-Thin'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Thin.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Thin.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Thin.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Thin.ttf') format('truetype');
-	font-weight: 100;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-BoldOblique.eot');
-	src:
-		local('GT Walsheim Pro Bold Oblique'),
-		local('GTWalsheimPro-BoldOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BoldOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BoldOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BoldOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BoldOblique.ttf') format('truetype');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Ultra';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBold.eot');
-	src:
-		local('GT Walsheim Pro Ultra Bold'),
-		local('GTWalsheimPro-UltraBold'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBold.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBold.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBold.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBold.ttf') format('truetype');
-	font-weight: 800;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Ultra';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBoldOblique.eot');
-	src:
-		local('GT Walsheim Pro Ultra Bold Oblique'),
-		local('GTWalsheimPro-UltraBoldOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBoldOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBoldOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBoldOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraBoldOblique.ttf') format('truetype');
-	font-weight: 800;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-MediumOblique.eot');
-	src:
-		local('GT Walsheim Pro Medium Oblique'),
-		local('GTWalsheimPro-MediumOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-MediumOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-MediumOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-MediumOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-MediumOblique.ttf') format('truetype');
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-Bold.eot');
-	src:
-		local('GT Walsheim Pro Bold'),
-		local('GTWalsheimPro-Bold'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Bold.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Bold.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-Medium.eot');
-	src:
-		local('GT Walsheim Pro Medium'),
-		local('GTWalsheimPro-Medium'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Medium.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Medium.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Medium.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Medium.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-RegularOblique.eot');
-	src:
-		local('GT Walsheim Pro Regular Oblique'),
-		local('GTWalsheimPro-RegularOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-RegularOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-RegularOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-RegularOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-RegularOblique.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-LightOblique.eot');
-	src:
-		local('GT Walsheim Pro Light Oblique'),
-		local('GTWalsheimPro-LightOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-LightOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-LightOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-LightOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-LightOblique.ttf') format('truetype');
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Ultra';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLight.eot');
-	src:
-		local('GT Walsheim Pro Ultra Light'),
-		local('GTWalsheimPro-UltraLight'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLight.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLight.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLight.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLight.ttf') format('truetype');
-	font-weight: 200;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Ultra';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLightOblique.eot');
-	src:
-		local('GT Walsheim Pro Ultra Light Oblique'),
-		local('GTWalsheimPro-UltraLightOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLightOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLightOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLightOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-UltraLightOblique.ttf') format('truetype');
-	font-weight: 200;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-BlackOblique.eot');
-	src:
-		local('GT Walsheim Pro Black Oblique'),
-		local('GTWalsheimPro-BlackOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BlackOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BlackOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BlackOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-BlackOblique.ttf') format('truetype');
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-BlackItalic.ttf') format('truetype');
 	font-weight: 900;
 	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-	font-family: 'GT Walsheim Pro';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-Black.eot');
-	src:
-		local('GT Walsheim Pro Black'),
-		local('GTWalsheimPro-Black'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Black.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Black.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Black.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-Black.ttf') format('truetype');
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Cond Ultra';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBold.eot');
-	src:
-		local('GT Walsheim Pro Condensed Ultra Bold'),
-		local('GTWalsheimPro-CondensedUltraBold'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBold.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBold.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBold.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBold.ttf') format('truetype');
-	font-weight: 800;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLight.eot');
-	src:
-		local('GT Walsheim Pro Condensed Light'),
-		local('GTWalsheimPro-CondensedLight'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLight.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLight.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLight.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLight.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBoldOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Bold Oblique'),
-		local('GTWalsheimPro-CondensedBoldOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBoldOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBoldOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBoldOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBoldOblique.ttf') format('truetype');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLightOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Light Oblique'),
-		local('GTWalsheimPro-CondensedLightOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLightOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLightOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLightOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedLightOblique.ttf') format('truetype');
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThin.eot');
-	src:
-		local('GT Walsheim Pro Condensed Thin'),
-		local('GTWalsheimPro-CondensedThin'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThin.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThin.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThin.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThin.ttf') format('truetype');
-	font-weight: 100;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GTWalsheimPro-CondensedULightIt';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLightOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Ultra Light Oblique'),
-		local('GTWalsheimPro-CondensedUltraLightOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLightOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLightOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLightOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLightOblique.ttf') format('truetype');
-	font-weight: 200;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Cond';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMedium.eot');
-	src:
-		local('GT Walsheim Pro Condensed Medium'),
-		local('GTWalsheimPro-CondensedMedium'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMedium.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMedium.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMedium.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMedium.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlackOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Black Oblique'),
-		local('GTWalsheimPro-CondensedBlackOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlackOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlackOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlackOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlackOblique.ttf') format('truetype');
-	font-weight: 900;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegular.eot');
-	src:
-		local('GT Walsheim Pro Condensed Regular'),
-		local('GTWalsheimPro-CondensedRegular'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegular.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegular.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegular.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThinOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Thin Oblique'),
-		local('GTWalsheimPro-CondensedThinOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThinOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThinOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThinOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedThinOblique.ttf') format('truetype');
-	font-weight: 100;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBold.eot');
-	src:
-		local('GT Walsheim Pro Condensed Bold'),
-		local('GTWalsheimPro-CondensedBold'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBold.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBold.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBold.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBold.ttf') format('truetype');
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegularOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Regular Oblique'),
-		local('GTWalsheimPro-CondensedRegularOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegularOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegularOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegularOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedRegularOblique.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GTWalsheimPro-CondensedULight';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLight.eot');
-	src:
-		local('GT Walsheim Pro Condensed Ultra Light'),
-		local('GTWalsheimPro-CondensedUltraLight'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLight.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLight.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLight.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraLight.ttf') format('truetype');
-	font-weight: 200;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Cond Ultra';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBoldOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Ultra Bold Oblique'),
-		local('GTWalsheimPro-CondensedUltraBoldOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBoldOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBoldOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBoldOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedUltraBoldOblique.ttf') format('truetype');
-	font-weight: 800;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Cond';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMediumOblique.eot');
-	src:
-		local('GT Walsheim Pro Condensed Medium Oblique'),
-		local('GTWalsheimPro-CondensedMediumOblique'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMediumOblique.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMediumOblique.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMediumOblique.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedMediumOblique.ttf') format('truetype');
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'GT Walsheim Pro Condensed';
-	src: url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlack.eot');
-	src:
-		local('GT Walsheim Pro Condensed Black'),
-		local('GTWalsheimPro-CondensedBlack'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlack.eot?#iefix') format('embedded-opentype'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlack.woff2') format('woff2'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlack.woff') format('woff'),
-		url('../assets/GTWalsheimPro/GTWalsheimPro-CondensedBlack.ttf') format('truetype');
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Black.ttf') format('truetype');
 	font-weight: 900;
 	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-ThinItalic.ttf') format('truetype');
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-UltralightItalic.ttf') format('truetype');
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Ultrabold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-UltraboldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SVN-Walsheim Pro';
+	src: url('../assets/SVNWalsheimPro/SVN-WalsheimPro-Ultralight.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
 }

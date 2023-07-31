@@ -72,7 +72,7 @@
 
 @layer base {
 	* {
-		@apply border-border font-GTWalsheimPro;
+		@apply border-border font-SVNWalsheimPro;
 	}
 	body {
 		@apply bg-background text-foreground max-md:text-sm;
