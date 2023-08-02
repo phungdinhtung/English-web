@@ -6,8 +6,7 @@ import { ReactElement } from 'react'
 const Page: NextPageWithLayout = () => {
 	return (
 		<ContainerAnimationAxis>
-			<h1>Page</h1>
-			<p>chuc-nang-cua-danh-tu-trong-cau</p>
+			<h1>Level1</h1>
 		</ContainerAnimationAxis>
 	)
 }

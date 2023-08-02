@@ -46,20 +46,21 @@ export default function Home() {
 		{
 			onDrag: ({ active, offset: [x, y], tap }) => {
 				if (tap) {
-					setOpen(!open)
-					api.start({
-						from: {
-							width: 300,
-							height: 300,
-							borderRadius: 999,
-						},
-						to: {
-							y: 0,
-							width: widthScreen + Math.abs(x) * 2,
-							height: heightScreen + Math.abs(y) * 2,
-							borderRadius: 0,
-						},
-					})
+					setOpen(true)
+					!open &&
+						api.start({
+							from: {
+								width: 300,
+								height: 300,
+								borderRadius: 999,
+							},
+							to: {
+								y: 0,
+								width: widthScreen + Math.abs(x) * 2,
+								height: heightScreen + Math.abs(y) * 2,
+								borderRadius: 0,
+							},
+						})
 					setTimeout(() => {
 						router.push('/home')
 					}, 1200)

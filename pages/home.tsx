@@ -1,10 +1,11 @@
+import ContainerAnimationAxis from '@/components/Animation/ContainerAnimationAxis'
 import Layout from '@/layout/Layout'
 import { NextPageWithLayout } from '@/types/next'
 import { ReactElement } from 'react'
 
 const Home: NextPageWithLayout = () => {
 	return (
-		<div>
+		<ContainerAnimationAxis>
 			<h1>HOME</h1>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
@@ -56,7 +57,7 @@ const Home: NextPageWithLayout = () => {
 				chúng mình tại SotaTek IC (sotatek.ic@sotatek.com) để được giải đáp nhé! IC Lead: Thu Trang (trang.duong) IC
 				Member: Ngọc Quân (quan.ngo2) IC Member: Linh Giang (giang.nguyen9)
 			</p>
-		</div>
+		</ContainerAnimationAxis>
 	)
 }
 

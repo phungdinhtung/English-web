@@ -1,5 +1,4 @@
 import { NavBar } from '@/components/NavBar'
-import { motion } from 'framer-motion'
 import React from 'react'
 
 interface LayoutProps {
@@ -8,20 +7,9 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
 	return (
-		<div className="overflow-hidden">
+		<div>
 			<NavBar />
-			<motion.div
-				initial={{ x: 300, opacity: 0 }}
-				animate={{ x: 0, opacity: 1 }}
-				exit={{ x: 300, opacity: 0 }}
-				transition={{
-					type: 'spring',
-					stiffness: 260,
-					damping: 20,
-				}}
-			>
-				<main className="container">{children}</main>
-			</motion.div>
+			<main className="container">{children}</main>
 		</div>
 	)
 }

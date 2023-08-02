@@ -10,7 +10,7 @@ interface ILogo {
 const Logo = ({ className }: ILogo) => {
 	return (
 		<Link href="/">
-			<Image className={cn(' rounded-full mx-4', className)} src={logo} alt="logo" width={60} height={60} />
+			<Image priority className={cn(' rounded-full mx-4', className)} src={logo} alt="logo" width={60} height={60} />
 		</Link>
 	)
 }

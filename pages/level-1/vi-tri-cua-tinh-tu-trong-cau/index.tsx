@@ -7,7 +7,7 @@ const Page: NextPageWithLayout = () => {
 	return (
 		<ContainerAnimationAxis>
 			<h1>Page</h1>
-			<p>chuc-nang-cua-danh-tu-trong-cau</p>
+			<p>Vị Trí Của Tính Từ Trong Câu</p>
 		</ContainerAnimationAxis>
 	)
 }
