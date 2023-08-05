@@ -1,12 +1,12 @@
-import { animated, to, useSpring } from '@react-spring/web'
+import { animated, to, useSpring } from "@react-spring/web"
 
-import { cn } from '@/lib/utils'
-import arrowWhite from '@/public/images/arrow-white.png'
-import { useDrag, useGesture } from '@use-gesture/react'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { useRef, useState } from 'react'
-import { useWindowSize } from 'react-use'
+import { cn } from "@/lib/utils"
+import arrowWhite from "@/public/images/arrow-white.png"
+import { useDrag, useGesture } from "@use-gesture/react"
+import Image from "next/image"
+import { useRouter } from "next/router"
+import { useRef, useState } from "react"
+import { useWindowSize } from "react-use"
 
 export default function Home() {
 	const router = useRouter()
@@ -36,7 +36,7 @@ export default function Home() {
 		zoom: 0,
 		x: 0,
 		y: 0,
-		config: { mass: 5, tension: 350, friction: 40 },
+		config: { mass: 2, tension: 350, friction: 40 },
 		width: 280,
 		height: 280,
 		borderRadius: 999,
@@ -62,7 +62,7 @@ export default function Home() {
 							},
 						})
 					setTimeout(() => {
-						router.push('/home')
+						router.push("/home")
 					}, 1200)
 				} else if (!open) {
 					return api.start({ x, y, rotateX: 0, rotateY: 0, scale: active ? 1 : 1.1 })
@@ -108,7 +108,7 @@ export default function Home() {
 				{...bind()}
 				style={{ x: xWelcome, y: yWelcome, scale: scaleWelcome }}
 				className={
-					'fixed top-20 md:top-40 rotate-12 select-none cursor-move max-md:text-xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-white touch-none'
+					"fixed top-20 md:top-40 rotate-12 select-none cursor-move max-md:text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#395B64] to-white touch-none"
 				}
 			>
 				Welcome to DTEng
@@ -131,9 +131,9 @@ export default function Home() {
 			</animated.div>
 			<animated.div
 				ref={target}
-				className={cn('bg-[#404040] cursor-move rounded-full flex items-center justify-center touch-none')}
+				className={cn("bg-[#2C3333] cursor-move rounded-full flex items-center justify-center touch-none")}
 				style={{
-					transform: 'perspective(600px)',
+					transform: "perspective(600px)",
 					x,
 					y,
 					scale: to([scale, zoom], (s, z) => s + z),
@@ -145,8 +145,8 @@ export default function Home() {
 					borderRadius,
 				}}
 			>
-				<div className="bg-gradient-to-r from-indigo-500 to-white rounded-full p-1">
-					<div className={cn('bg-logo-dark object-cover bg-cover w-[280px] h-[280px] rounded-full')} />
+				<div className="bg-gradient-to-r from-[#395B64] to-white rounded-full p-1">
+					<div className={cn("bg-logo-dark object-cover bg-cover w-[280px] h-[280px] rounded-full")} />
 				</div>
 			</animated.div>
 		</div>

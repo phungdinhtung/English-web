@@ -1,62 +1,102 @@
-import ContainerAnimationAxis from '@/components/Animation/ContainerAnimationAxis'
-import Layout from '@/layout/Layout'
-import { NextPageWithLayout } from '@/types/next'
-import { ReactElement } from 'react'
+import ContainerAnimationAxis from "@/components/Animation/ContainerAnimationAxis"
+import { VariantsShowText } from "@/constants/variants-motion"
+import Layout from "@/layout/Layout"
+import arrowWhite from "@/public/images/arrow-white.png"
+import { NextPageWithLayout } from "@/types/next"
+import { motion } from "framer-motion"
+import { ReactElement } from "react"
+
+const dataHome = `Chào mừng đến với blog của tôi, một không gian học tập và chia sẻ
+kiến thức đặc biệt dành riêng cho các lập trình viên IT muốn nâng cao kỹ năng tiếng Anh của mình! <br/> 
+
+Xin chào các bạn, tôi là Tùng, một lập trình viên đam mê công nghệ và đồng thời là một người yêu thích ngôn
+ngữ và văn hóa. Blog này được tạo ra với mục tiêu chia sẻ những kinh nghiệm, phương pháp học tập hiệu quả và
+những bài học bổ ích giúp các bạn tiến bộ trong việc sử dụng tiếng Anh trong lĩnh vực công nghệ thông tin. <br/> 
+
+Trong thế giới ngày càng kết nối và phát triển của IT, tiếng Anh đã trở thành một yếu tố quan trọng không thể
+thiếu trong công việc, học tập và giao tiếp hàng ngày. Tuy nhiên, việc học tiếng Anh không phải lúc nào cũng
+dễ dàng đối với các lập trình viên, đặc biệt khi phải đối mặt với cấu trúc ngữ pháp phức tạp và từ vựng chuyên
+ngành. <br/> 
+
+Qua blog này, tôi muốn giúp bạn vượt qua những khó khăn đó bằng cách cung cấp các hướng dẫn, bài học, và tài
+liệu hữu ích giúp bạn hiểu rõ hơn về cấu trúc tiếng Anh. Từ những khái niệm cơ bản đến những kỹ thuật nâng
+cao, chúng ta sẽ cùng nhau khám phá và ứng dụng tiếng Anh một cách linh hoạt và tự tin trong công việc và cuộc
+sống hàng ngày. <br/> 
+
+Rất mong rằng blog này sẽ trở thành nguồn cảm hứng và động lực để các bạn chinh phục tiếng Anh một cách hiệu
+quả, nhanh chóng và vui vẻ. Hãy cùng nhau xây dựng một cộng đồng học tập tích cực và hỗ trợ lẫn nhau trên hành
+trình chinh phục ngôn ngữ mới này. <br/> 
+
+Cảm ơn các bạn đã đến với blog của tôi! Hãy đồng hành cùng Tùng và cùng nhau khám phá thế giới tiếng Anh trong
+lĩnh vực công nghệ thông tin! <br/> 
+
+Let's code and learn English together! <br/> 
+
+Best regards, <br/> 
+
+Tùng
+`
+
+const icon = {
+	hidden: {
+		pathLength: 0,
+		fill: "rgba(255, 255, 255, 0)",
+	},
+	visible: {
+		pathLength: 1,
+		fill: "rgba(255, 255, 255, 1)",
+	},
+}
 
 const Home: NextPageWithLayout = () => {
 	return (
 		<ContainerAnimationAxis>
 			<h1>HOME</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, officia! Exercitationem porro omnis nesciunt
-				accusamus nemo? Aliquid eaque magni, repudiandae, aspernatur hic nihil ut, dolor in numquam culpa excepturi at.
-			</p>
-
-			<br />
-			<br />
-			<br />
-
-			<p>
-				CHÍNH THỨC PHÁT ĐỘNG "SOTATEK SPORT DAY 2023": NGÀY HỘI THỂ THAO LỚN NHẤT TOÀN SOTATEK NĂM 2023!!! :cheergi:
-				@all SotaTekers ơiiii! Các bạn đã sẵn sàng cho Tháng 8 siêu bùng nổ chưa? 🔥🔥 Hãy cùng nhau chào đón sinh nhật
-				tròn 8 tuổi của SotaTek - 8th: The Revolution với chuỗi hoạt động thể thao, giải trí vô cùng hấp dẫn: Cuộc thi
-				ảnh Online "SotaTek in your area", Những món quà xinh xắn dành riêng cho các SotaTekers, Vinh danh các CBNV thâm
-				niên,... và quan trọng nhất chính là Ngày hội thể thao "SotaTek Sport Day 2023" sẽ diễn ra tại khu vực Hà Nội
-				vào ngày 11/08 tới đây. :pepedance28:SotaTek Sport Day 2023 không chỉ là cơ hội để gần 900 SotaTekers hội tụ,
-				thắt chặt tình đồng chí, mà còn giúp nâng cao sức khỏe thể chất lẫn tinh thần với những màn tranh tài nảy lửa,
-				thú vị giữa các đội chơi, cùng cơ cấu giải thưởng vô cùng hấp dẫn lên đến gần 50,000,000 ĐỒNG! 💸💸 Đặc biệt,
-				BTC sẽ dành tặng :cheergi: 50 E-voucher Urbox :cheergi:, quy đổi ra voucher mua sắm, ăn uống của rất nhiều
-				thương hiệu nổi tiếng như Shopee, Lazada, Tiki, Gogi, Kichi Kichi, iSushi,.... mỗi Voucher trị giá 100,000
-				VNĐ cho 50 SotaTekers ĐĂNG KÝ ĐẦU TIÊN và CHẮC CHẮN có mặt tham gia Sport Day. Nhanh nhanh hốt quà lẹ nào các
-				chế ơi!!! 🎁 Thông tin về chương trình dự kiến như sau: 🤟 Agenda dự kiến: Hội thao Sport Day và Tiệc tối sau
-				chương trình 🤟 Đối tượng tham gia: CBNV khu vực Hà Nội (Lưu ý: đây là hoạt động BẮT BUỘC do công ty tổ chức,
-				được tính như MỘT NGÀY CÔNG bình thường) :pepedance28: Trang phục bắt buộc: Áo đồng phục SotaTek (ACE chưa có áo
-				vui lòng đọc kỹ hướng dẫn và đăng ký bên dưới nhé) ❗❗ LINK ĐĂNG KÝ:
-				https://docs.google.com/forms/d/e/1FAIpQLSfjmjoVYkgU0vgbinPMaAvgsuy4JAJQgula5-KZCUgQnw8F6A/viewform :cheergi:
-				Thời gian tổ chức: buổi chiều, Thứ Sáu, 11/08/2023 (thời gian cụ thể sẽ được BTC thông báo sau) :takemymoney:
-				Thời hạn đăng ký tham gia: 31/07/2023 - 01/08/2023 Sau 01/08, BTC sẽ đóng form đăng ký.  ACE đã đăng ký vui lòng
-				không huỷ và tới tham gia đúng thời gian, địa điểm đã thông báo. Việc đăng ký này sẽ giúp BTC đảm bảo tốt nhất
-				về chất lượng trong khâu đón tiếp, tổ chức chương trình, đặt tiệc,... cho mọi người. :pepe-burn: Địa điểm dự
-				kiến: Nhà thi đấu Quận Cầu Giấy, 35 Trần Quý Kiên, Dịch Vọng, Cầu Giấy, Hà Nội. Thông tin chi tiết về Ngày hội
-				thể thao sẽ được BTC cập nhật liên tục đến anh chị em trên các kênh truyền thông của SotaTek (Google Chat,
-				Email, Facebook Group). Anh chị em nhớ theo dõi nhé! Nếu có bất kỳ thắc mắc nào, anh chị em vui lòng liên hệ với
-				chúng mình tại SotaTek IC (sotatek.ic@sotatek.com) để được giải đáp nhé! IC Lead: Thu Trang (trang.duong) IC
-				Member: Ngọc Quân (quan.ngo2) IC Member: Linh Giang (giang.nguyen9)
-			</p>
+			<motion.div
+				variants={VariantsShowText.container}
+				initial="hidden"
+				animate="show"
+				className="flex flex-wrap gap-1 max-w-3xl leading-8 text-lg relative select-none"
+			>
+				&#9995;
+				{dataHome.split(" ").map((item, index) => (
+					<>
+						{item === "<br/>" ? (
+							<div className="basis-full" />
+						) : (
+							<motion.span key={index} variants={VariantsShowText.itemFromRight}>
+								{item}{" "}
+							</motion.span>
+						)}
+					</>
+				))}
+				<motion.div
+					initial={{
+						opacity: 0,
+					}}
+					animate={{
+						opacity: 1,
+					}}
+					transition={{ ease: "anticipate", duration: 4 }}
+					className="absolute -right-2/3 flex"
+				>
+					<motion.img
+						src={arrowWhite.src}
+						className="select-none cursor-move w-32"
+						drag
+						whileDrag={{ scale: 1.5 }}
+						dragSnapToOrigin
+					/>
+					<motion.span
+						className="select-none cursor-move text-2xl font-bold"
+						drag
+						whileDrag={{ scale: 1.5 }}
+						dragSnapToOrigin
+					>
+						&#128008; Don't read it <br /> I'm talking nonsense &#128008;
+					</motion.span>
+				</motion.div>
+			</motion.div>
 		</ContainerAnimationAxis>
 	)
 }

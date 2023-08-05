@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import * as React from 'react'
+import Link from "next/link"
+import * as React from "react"
 
 import {
 	NavigationMenu,
@@ -9,39 +9,33 @@ import {
 	NavigationMenuList,
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-import { LEVEL1_ROUTE } from '@/constants/route'
-import { cn } from '@/lib/utils'
-import { Star } from 'lucide-react'
-import Logo from './Logo'
-import { motion } from 'framer-motion'
+} from "@/components/ui/navigation-menu"
+import { LEVEL1_ROUTE } from "@/constants/route"
+import { cn } from "@/lib/utils"
+import { Star } from "lucide-react"
+import Logo from "./Logo"
+import { motion } from "framer-motion"
 
 const levels: { title: string; href: string; description?: string }[] = [
 	{
-		title: 'Level 1',
-		href: '/level-1',
-		description: 'A modal dialog that interrupts the user with important content and expects a response.',
+		title: "Level 1",
+		href: "/level-1",
 	},
 	{
-		title: 'Level 2',
-		href: '/docs/primitives/hover-card',
-		description: 'For sighted users to preview content available behind a link.',
+		title: "Level 2",
+		href: "/level-2",
 	},
 	{
-		title: 'Level 3',
-		href: '/docs/primitives/progress',
-		description:
-			'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+		title: "Level 3",
+		href: "/level-3",
 	},
 	{
-		title: 'Level 4',
-		href: '/docs/primitives/scroll-area',
-		description: 'Visually or semantically separates content.',
+		title: "Level 4",
+		href: "/level-4",
 	},
 	{
-		title: 'Level 5',
-		href: '/docs/primitives/tabs',
-		description: 'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+		title: "Level 5",
+		href: "/level-5",
 	},
 ]
 
@@ -52,12 +46,12 @@ export function NavBar() {
 			animate={{ y: 0 }}
 			exit={{ y: -100 }}
 			transition={{
-				type: 'spring',
+				type: "spring",
 				stiffness: 200,
 				damping: 50,
 			}}
 		>
-			<div className="container py-8 bg-white/10 rounded-b-full flex items-center justify-between">
+			<div className="container py-8 bg-[#395B64] rounded-b-full flex items-center justify-between">
 				<Logo />
 				<NavigationMenu>
 					<NavigationMenuList className="gap-1">
@@ -110,16 +104,16 @@ export function NavBar() {
 	)
 }
 
-const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
 	({ className, title, children, href, ...props }, ref) => {
 		return (
 			<li>
 				<NavigationMenuLink asChild>
 					<Link
-						href={href || '/'}
+						href={href || "/"}
 						ref={ref}
 						className={cn(
-							'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+							"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
 							className
 						)}
 						{...props}
@@ -133,32 +127,34 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
 	}
 )
 
-const ListItemLevel = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
+const ListItemLevel = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
 	({ className, title, ...props }, ref) => {
-		const numberStar = parseInt(title?.slice(-1) || '1')
+		const numberStar = parseInt(title?.slice(-1) || "1")
 		return (
 			<li>
 				<NavigationMenuLink asChild>
 					<Link
-						href={props.href || '/'}
+						href={props.href || "/"}
 						ref={ref}
 						className={cn(
-							'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+							"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground fade-gradient",
 							className
 						)}
 						{...props}
 					>
 						<div className="text-sm font-medium leading-none flex items-center gap-1">
-							{title}{' '}
+							{title}{" "}
 							{[...Array(numberStar)].map((x, i) => (
 								<Star className="w-4" key={i} strokeWidth={3} />
 							))}
 						</div>
-						{LEVEL1_ROUTE.links.map((item) => (
-							<p key={item.title} className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-								{item.title}
-							</p>
-						))}
+						<div className="h-32 overflow-hidden">
+							{LEVEL1_ROUTE.links.map((item) => (
+								<p key={item.title} className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+									{item.title}
+								</p>
+							))}
+						</div>
 					</Link>
 				</NavigationMenuLink>
 			</li>
@@ -166,5 +162,5 @@ const ListItemLevel = React.forwardRef<React.ElementRef<'a'>, React.ComponentPro
 	}
 )
 
-ListItem.displayName = 'ListItem'
-ListItemLevel.displayName = 'ListItemLevel'
+ListItem.displayName = "ListItem"
+ListItemLevel.displayName = "ListItemLevel"

@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import logo from '@/public/images/logo.png'
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
+import Image from "next/image"
+import logo from "@/public/images/logo.png"
+import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 interface ILogo {
 	className?: string
@@ -10,7 +10,15 @@ interface ILogo {
 const Logo = ({ className }: ILogo) => {
 	return (
 		<Link href="/">
-			<Image priority className={cn(' rounded-full mx-4', className)} src={logo} alt="logo" width={60} height={60} />
+			<Image
+				priority
+				placeholder="blur"
+				className={cn(" rounded-full mx-4", className)}
+				src={logo}
+				alt="logo"
+				width={60}
+				height={60}
+			/>
 		</Link>
 	)
 }
