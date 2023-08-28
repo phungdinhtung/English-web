@@ -10,8 +10,7 @@ import { ReactElement } from "react"
 
 const Page: NextPageWithLayout = () => {
 	return (
-		<ContainerAnimationAxis className="space-y-10 mt-10">
-			<h1 className="select-none">{LEVEL1_ROUTE.title}</h1>
+		<ContainerAnimationAxis className="space-y-10 mt-10" title={LEVEL1_ROUTE.title}>
 			<motion.div
 				variants={VariantsShowItems.container}
 				initial="hidden"

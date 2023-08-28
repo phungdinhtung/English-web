@@ -51,14 +51,14 @@ export function NavBar() {
 				damping: 50,
 			}}
 		>
-			<div className="container py-8 bg-[#395B64] rounded-b-full flex items-center justify-between">
+			<div className="container py-8 bg-[#395B64] rounded-b-3xl md:rounded-b-full flex items-center justify-between">
 				<Logo />
 				<NavigationMenu>
-					<NavigationMenuList className="gap-1">
+					<NavigationMenuList className="gap-1 max-md:flex-col">
 						<NavigationMenuItem>
 							<NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
 							<NavigationMenuContent>
-								<ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+								<ul className="grid gap-3 p-4 w-72 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 									<li className="row-span-3">
 										<NavigationMenuLink asChild>
 											<Link
@@ -85,18 +85,18 @@ export function NavBar() {
 						<NavigationMenuItem>
 							<NavigationMenuTrigger>Learn with Level</NavigationMenuTrigger>
 							<NavigationMenuContent>
-								<ul className="grid w-[400px] gap-3 p-5 md:w-[500px] md:grid-cols-2 lg:w-[680px] ">
+								<ul className="grid w-72 gap-3 p-5 md:w-[500px] md:grid-cols-2 lg:w-[680px] ">
 									{levels.map((item) => (
 										<ListItemLevel key={item.title} title={item.title} href={item.href} />
 									))}
 								</ul>
 							</NavigationMenuContent>
 						</NavigationMenuItem>
-						<NavigationMenuItem>
+						{/* <NavigationMenuItem>
 							<Link href="/docs" legacyBehavior passHref>
 								<NavigationMenuLink className={navigationMenuTriggerStyle()}>Games ( Coming Soon )</NavigationMenuLink>
 							</Link>
-						</NavigationMenuItem>
+						</NavigationMenuItem> */}
 					</NavigationMenuList>
 				</NavigationMenu>
 			</div>

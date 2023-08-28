@@ -131,7 +131,9 @@ export default function Home() {
 			</animated.div>
 			<animated.div
 				ref={target}
-				className={cn("bg-[#2C3333] cursor-move rounded-full flex items-center justify-center touch-none")}
+				className={cn(
+					"bg-gradient-to-r from-[#596666] to-[#2C3333] cursor-move rounded-full flex items-center justify-center touch-none"
+				)}
 				style={{
 					transform: "perspective(600px)",
 					x,

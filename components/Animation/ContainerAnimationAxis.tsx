@@ -5,9 +5,10 @@ type TContainerAnimation = TPropsWithChildren &
 	HTMLMotionProps<"div"> & {
 		axisX?: number
 		axisY?: number
+		title?: string
 	}
 
-const ContainerAnimationAxis = ({ axisX = 0, axisY = 50, children, ...props }: TContainerAnimation) => {
+const ContainerAnimationAxis = ({ axisX = 0, axisY = 50, title, children, ...props }: TContainerAnimation) => {
 	return (
 		<motion.div
 			layout
@@ -21,6 +22,7 @@ const ContainerAnimationAxis = ({ axisX = 0, axisY = 50, children, ...props }: T
 			}}
 			{...props}
 		>
+			<h1 className="select-none">{title}</h1>
 			{children}
 		</motion.div>
 	)

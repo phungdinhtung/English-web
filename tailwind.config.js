@@ -45,6 +45,10 @@ module.exports = {
 					DEFAULT: "hsl(var(--card))",
 					foreground: "hsl(var(--card-foreground))",
 				},
+				highlight: {
+					one: "#FEC260",
+					two: "#03C988",
+				},
 			},
 			borderRadius: {
 				lg: "var(--radius)",
@@ -82,7 +86,7 @@ module.exports = {
 			addComponents({
 				".container": {
 					maxWidth: "100%",
-					padding: "2rem",
+					padding: "1rem",
 					"@screen sm": {
 						paddingLeft: "3rem",
 						paddingRight: "3rem",

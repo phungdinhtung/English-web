@@ -70,15 +70,28 @@
 		--ring: 0 0% 14.9%;
 	}
 }
-
+/* https://colorhunt.co/palette/df2e38ddf7e3c7e8ca5d9c59 */
 @layer base {
 	* {
 		@apply border-border font-SVNWalsheimPro;
 	}
 	body {
-		@apply bg-background text-foreground max-md:text-sm;
+		@apply bg-background text-foreground max-md:text-sm mb-10;
 	}
 	h1 {
-		@apply text-[60px] leading-[80px] font-bold;
+		@apply text-[60px] leading-[80px] font-bold max-md:text-2xl;
+	}
+	/* NOTE TEXT */
+	h6 {
+		@apply text-base text-highlight-one;
+	}
+	mark {
+		@apply bg-[#FAF1E4] text-[#435334] px-1 rounded-lg;
+	}
+	.annotate {
+		@apply bg-[#F9F5EB] text-[#002B5B] p-2 rounded-xl;
+	}
+	.link_highlight {
+		@apply bg-[#AACB73] text-[#263A29] px-1 rounded-lg; /* https://colorhunt.co/palette/faf1e4cedebd9eb384435334 */
 	}
 }

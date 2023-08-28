@@ -34,7 +34,7 @@ Let's code and learn English together! <br/>
 
 Best regards, <br/> 
 
-Tùng
+Tùng !
 `
 
 const icon = {
@@ -50,8 +50,7 @@ const icon = {
 
 const Home: NextPageWithLayout = () => {
 	return (
-		<ContainerAnimationAxis>
-			<h1>HOME</h1>
+		<ContainerAnimationAxis title="HOME">
 			<motion.div
 				variants={VariantsShowText.container}
 				initial="hidden"
@@ -78,17 +77,17 @@ const Home: NextPageWithLayout = () => {
 						opacity: 1,
 					}}
 					transition={{ ease: "anticipate", duration: 4 }}
-					className="absolute -right-2/3 flex"
+					className="absolute -right-2/3 flex max-md:hidden"
 				>
 					<motion.img
 						src={arrowWhite.src}
-						className="select-none cursor-move w-32"
+						className="select-none cursor-move w-12 md:w-32"
 						drag
 						whileDrag={{ scale: 1.5 }}
 						dragSnapToOrigin
 					/>
 					<motion.span
-						className="select-none cursor-move text-2xl font-bold"
+						className="select-none cursor-move md:text-2xl font-bold"
 						drag
 						whileDrag={{ scale: 1.5 }}
 						dragSnapToOrigin
